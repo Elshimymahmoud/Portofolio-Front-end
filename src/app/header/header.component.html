@@ -1,0 +1,103 @@
+<header style="width: 2000px;">
+    <div class="header-area ">
+
+        <div id="sticky-header"
+            style="display: flex;position: fixed;background-color: currentColor;border-radius:10px 12px;"
+            class="main-header-area">
+            <div style="width: 1000px;" class="container-fluid">
+
+                <div class="row align-items-center">
+                    <div class="col-xl-3 col-lg-2">
+                        <div class="logo">
+                            <p style=" color: #D465EF;">{{title}}</p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-6 col-lg-7">
+                        <div class="main-menu  d-none d-lg-block">
+                            <nav  style="margin-right: 20px;">
+                                <ul id="navigation">
+                                    <li class="nav-item p-1 rounded">
+                                       
+                                        <a class="nav-link smooth-scroll text-uppercase" href="#"> <i class="fa-solid fa-house"></i>{{tilteHome}}
+                                        </a>
+                                    </li>
+                                    <li>><a style="    margin-bottom: 20px;
+" class="nav-link smooth-scroll text-uppercase"
+                                            routerLink="/about" routerLinkActive="active"
+                                            href="about.html"><i class="fa-solid fa-user"></i>{{tilteabout}}</a></li>
+                                    <li><a class="nav-link smooth-scroll text-uppercase"
+                                            routerLink="/skills" routerLinkActive="active"
+                                            href="services.html"><i class="fa-solid fa-file"></i>{{tilteservices}}</a></li>
+                                    <li><a class="nav-link smooth-scroll text-uppercase"
+                                            routerLink="projects" routerLinkActive="active" href="#"><i class="fa-solid fa-book"></i>{{tilteprojects}}
+                                            <i class="ti-angle-down"></i></a>
+
+                                    </li>
+
+
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                        <div class="Appointment">
+                            <div class="book_btn d-none d-lg-block" >
+
+                                <a style="width: 1000px;
+                                margin-left: 50px;" routerLink="contact" href="#">{{tiltecontact}}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="mobile_menu d-block d-lg-none">
+                            <div class="slicknav_menu ">
+                                <i class="bi bi-list"></i>
+                                <a href="#" aria-haspopup="true" role="button" tabindex="0"
+                                    class="slicknav_btn slicknav_collapsed" style="outline: none;"><span
+                                        class="slicknav_menutxt">MENU</span><span class="slicknav_icon"><span
+                                            class="slicknav_icon-bar"></span><span
+                                            class="slicknav_icon-bar"></span><span
+                                            class="slicknav_icon-bar"></span></span></a>
+                                <ul class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu"
+                                    style="display: none;">
+                                    <li><a class="active" href="index.html" role="menuitem" tabindex="-1">home</a></li>
+                                    <li><a href="about.html" role="menuitem" tabindex="-1">About</a></li>
+                                    <li><a href="services.html" role="menuitem" tabindex="-1">Services</a></li>
+                                    <li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem"
+                                            aria-haspopup="true" tabindex="-1" class="slicknav_item slicknav_row"
+                                            style="outline: none;"><a href="#" tabindex="-1">blog <i
+                                                    class="ti-angle-down"></i></a>
+                                            <span class="slicknav_arrow">+</span></a>
+                                        <ul class="submenu slicknav_hidden" role="menu" aria-hidden="true"
+                                            style="display: none;">
+                                            <li><a href="blog.html" role="menuitem" tabindex="-1">blog</a></li>
+                                            <li><a href="single-blog.html" role="menuitem" tabindex="-1">single-blog</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem"
+                                            aria-haspopup="true" tabindex="-1" class="slicknav_item slicknav_row"
+                                            style="outline: none;"><a href="#" tabindex="-1">pages <i
+                                                    class="ti-angle-down"></i></a>
+                                            <span class="slicknav_arrow">+</span></a>
+                                        <ul class="submenu slicknav_hidden" role="menu" aria-hidden="true"
+                                            style="display: none;">
+                                            <li><a href="portfolio.html" role="menuitem" tabindex="-1">Portfolio</a>
+                                            </li>
+                                            <li><a href="elements.html" role="menuitem" tabindex="-1">elements</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact.html" role="menuitem" tabindex="-1">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</header>

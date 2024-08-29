@@ -1,0 +1,32 @@
+<div class="dashboard-container">
+    <h2>Project Dashboard</h2>
+    <button class="add-button" (click)="openAddModal()">Add Project</button>
+    <table class="project-table">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Title</th>
+          <th>Tools</th>
+          <th>Description</th>
+          <th>Link</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let project of projects">
+          <td><img [src]="project.image" alt="{{ project.projectTitle }}" width="100" /></td>
+          <td>{{ project.projectTitle }}</td>
+          <td>{{ project.projectTools }}</td>
+          <td>{{ project.projectDescription }}</td>
+          <td><a [href]="project.projectLink" target="_blank">View Project</a></td>
+          <td>
+            <button (click)="openEditModal(project._id)">Edit</button>
+            <button (click)="deleteProject(project._id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <app-add-project [isOpen]="isAddModalOpen" (closeModal)="closeAddModal()"></app-add-project>
+    <app-edit-project [isOpen]="isEditModalOpen" (closeModal)="closeEditModal()"></app-edit-project>
+  </div>
+  

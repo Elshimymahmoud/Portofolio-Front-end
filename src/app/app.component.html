@@ -1,0 +1,7 @@
+<app-header *ngIf="!isActiveDash"></app-header>
+
+<app-dashheader *ngIf="isActiveDash"></app-dashheader>
+<div class="main-container"></div>
+<router-outlet></router-outlet>
+<app-footer *ngIf="!isActiveDash"></app-footer>
+

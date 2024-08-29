@@ -1,0 +1,42 @@
+<!-- edit-about.component.html -->
+<div class="edit-modal">
+  <div class="modal-content">
+    <h3>Edit About Information</h3>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>Title:</label>
+        <input [(ngModel)]="updatedInfo.title" name="title" />
+      </div>
+      <div class="form-group">
+        <label>Image URL:</label>
+        <input [(ngModel)]="updatedInfo.image" name="image" />
+      </div>
+      <div class="form-group">
+        <label>Description:</label>
+        <textarea [(ngModel)]="updatedInfo.FirstDescription" name="FirstDescription"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Address:</label>
+        <input [(ngModel)]="updatedInfo.address" name="address" />
+      </div>
+      <div class="form-group">
+        <label>Age:</label>
+        <input [(ngModel)]="updatedInfo.age" name="age" type="number" />
+      </div>
+      <div class="form-group">
+        <label>Degree:</label>
+        <input [(ngModel)]="updatedInfo.degree" name="degree" />
+      </div>
+      <div class="form-group">
+        <label>LinkedIn URL:</label>
+        <input [(ngModel)]="updatedInfo.linkedIn" name="linkedIn" />
+      </div>
+      <div class="form-group">
+        <label>GitHub URL:</label>
+        <input [(ngModel)]="updatedInfo.github" name="github" />
+      </div>
+      <button type="submit" class="save-btn">Save</button>
+      <button type="button" class="cancel-btn" (click)="closeModal()">Cancel</button>
+    </form>
+  </div>
+</div>

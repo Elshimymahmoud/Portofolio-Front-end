@@ -1,0 +1,50 @@
+<!-- about.component.html -->
+<div class="dashboard-container">
+  <h2>About Dashboard</h2>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Image</th>
+          <th>Description</th>
+          <th>Address</th>
+          <th>Age</th>
+          <th>Degree</th>
+          <th>LinkedIn</th>
+          <th>GitHub</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ infoarr.title }}</td>
+          <td>
+            <img [src]="infoarr.image" alt="About Image" class="table-img" />
+          </td>
+          <td>{{ infoarr.FirstDescription }}</td>
+          <td>{{ infoarr.address }}</td>
+          <td>{{ infoarr.age }}</td>
+          <td>{{ infoarr.degree }}</td>
+          <td>
+            <a [href]="infoarr.linkedIn" target="_blank">LinkedIn</a>
+          </td>
+          <td>
+            <a [href]="infoarr.github" target="_blank">GitHub</a>
+          </td>
+          <td>
+            <button class="edit-btn" (click)="openEditAboutModal()">Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <app-edit-about
+    *ngIf="isEditAboutModalOpen"
+    [aboutInfo]="infoarr"
+    (close)="closeEditAboutModal()"
+  ></app-edit-about>
+</div>

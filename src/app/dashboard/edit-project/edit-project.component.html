@@ -1,0 +1,43 @@
+<div class="modal" *ngIf="isOpen">
+  <div class="modal-content">
+    <span class="close-button" (click)="close()">×</span>
+    <h2>Edit Project</h2>
+    <form (ngSubmit)="onSubmit()">
+      <input
+        type="text"
+        placeholder="Project Title"
+        [(ngModel)]="project.projectTitle"
+        name="title"
+        required
+      />
+      <input
+        type="text"
+        placeholder="Project Tools"
+        [(ngModel)]="project.projectTools"
+        name="tools"
+        required
+      />
+      <textarea
+        placeholder="Project Description"
+        [(ngModel)]="project.projectDescription"
+        name="description"
+        required
+      ></textarea>
+      <input
+        type="text"
+        placeholder="Image URL"
+        [(ngModel)]="project.image"
+        name="image"
+        required
+      />
+      <input
+        type="text"
+        placeholder="Project Link"
+        [(ngModel)]="project.projectLink"
+        name="link"
+        required
+      />
+      <button type="submit">Update Project</button>
+    </form>
+  </div>
+</div>

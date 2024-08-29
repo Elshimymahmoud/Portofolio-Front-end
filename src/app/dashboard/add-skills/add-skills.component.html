@@ -1,0 +1,23 @@
+<!-- add-skill-modal.component.html -->
+<div class="modal" [ngClass]="{'show': isOpen}" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <h3>Add Skill</h3>
+      <form (ngSubmit)="addSkill()">
+        <div class="form-group">
+          <label for="title">Title:</label>
+          <input type="text" id="title" [(ngModel)]="newSkill.title" name="title" required />
+        </div>
+        <div class="form-group">
+          <label for="category">Category:</label>
+          <input type="text" id="category" [(ngModel)]="newSkill.category" name="category" required />
+        </div>
+        <div class="form-group">
+          <label for="progress">Progress:</label>
+          <input type="number" id="progress" [(ngModel)]="newSkill.progress" name="progress" required />
+        </div>
+        <button type="submit">Add Skill</button>
+        <button type="button" (click)="closeModal()">Cancel</button>
+      </form>
+    </div>
+  </div>
+  

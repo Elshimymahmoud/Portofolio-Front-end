@@ -1,0 +1,9 @@
+<!-- delete-skill-modal.component.html -->
+<div class="modal" [ngClass]="{'show': isOpen}" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <h3>Delete Skill</h3>
+      <button (click)="deleteSkill()">Delete</button>
+      <button (click)="closeModal()">Cancel</button>
+    </div>
+  </div>
+  

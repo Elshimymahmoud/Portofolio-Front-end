@@ -1,0 +1,131 @@
+<div class="slider_area">
+  <div class="single_slider d-flex align-items-center slider_bg_1">
+    <div class="shap_pattern d-none d-lg-block">
+      <img class="img" src="../../../../img/about/grid.png" alt="" />
+    </div>
+    <div class="social_links">
+      <ul>
+        <li>
+          <a href="#"> <i class="fa-brands fa-facebook"></i> </a>
+        </li>
+        <li>
+          <a href="#"> <i class="fa-brands fa-twitter"></i> </a>
+        </li>
+        <li>
+          <a href="#"> <i class="fa-brands fa-instagram"></i> </a>
+        </li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-xl-12">
+          <div class="slider_text text-center">
+            <h3>{{info ? info.title : ''}}</h3>
+            <p style="display: flex;">
+            
+            </p>
+            <span id="typed" class="typed">I'm developer</span> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Services Section -->
+<div class="service_area">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12">
+        <div class="section_title text-center mb-65">
+          <span>Service Provided</span>
+          <h3>Build brands campaigns <br />& digital projects</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Loop through services array -->
+      <div class="col-xl-4 col-md-4" *ngFor="let service of services">
+        <div class="single_service text-center">
+          <div class="icon">
+            <img [src]="service.image" [alt]="service.title" width="96" height="96">
+          </div>
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Portfolio Section -->
+<div class="portfolio_area portfolio_bg_1">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12">
+        <div class="section_title white_text text-center">
+          <span>Portfolios</span>
+          <h3>Some of my awesome <br />stuffs here</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="portfolio_image_area">
+  <div class="container">
+    <div class="row">
+      <!-- Loop through portfolios array -->
+      <div class="col-xl-4 col-md-4" *ngFor="let portfolio of portfolios">
+        <div class="single_Portfolio">
+          <div class="portfolio_thumb">
+            <img [src]="portfolio.image" [alt]="portfolio.title">
+          </div>
+          <div class="portfolio_hover">
+            <div class="title">
+              <h3>{{ portfolio.title }}</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Counter Section -->
+<div class="counter_area">
+  <div class="container">
+    <div class="row">
+      <!-- Loop through counters array -->
+      <!-- Counter Section -->
+<div class="counter_area" *ngIf="counters">
+  <div class="container">
+    <div class="row">
+      <!-- Loop through counters array -->
+      <div class="col-xl-4 col-md-4">
+        <div class="single_counter text-center">
+          <h3><span class="counter">{{ counters.totalProjects }}</span>+</h3>
+          <p class="title">Total Projects</p>
+        </div>
+      </div>
+      <div class="col-xl-4 col-md-4">
+        <div class="single_counter text-center">
+          <h3><span class="counter">{{ counters.onGoing }}</span>+</h3>
+          <p class="title">On Going Projects</p>
+        </div>
+      </div>
+      <div class="col-xl-4 col-md-4">
+        <div class="single_counter text-center">
+          <h3><span class="counter">{{ counters.doneProjects }}</span>+</h3>
+          <p class="title">Done Projects</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Your existing footer and other content here -->

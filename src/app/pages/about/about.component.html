@@ -1,0 +1,48 @@
+<section id="about">
+    <div class="container" >
+        <h2><strong>About</strong></h2>
+        <span class="bar-title mb-5"></span>
+        <div class="row">
+            <div class="col-lg-4 col-md-12" data-aos="fade-right">
+                <picture>
+                    <img class="image-about" [src]="info.image"  />
+                </picture>
+                <div class="d-flex justify-content-center">
+                    <a class="btn-social-media" [href]="info.linkedIn" rel="tooltip" target="_blank" title="Follow me on LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a class="btn-social-media btn-default btn-round btn-lg btn-icon" [href]="info.github" rel="tooltip" target="_blank" title="Follow me on GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-12 pt-4 pt-lg-0" data-aos="fade-left">
+                <h3>{{ info.title }}</h3>
+                <p class="font-italic">{{ info.FirstDescription }}</p>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                <strong>{{ info.address }}</strong>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-cake-candles"></i>
+                                <strong>{{ info.age }}</strong>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <strong>{{ info.degree }}</strong>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <p>{{ info.SecondDescription }}</p>
+            </div>
+        </div>
+    </div>
+</section>

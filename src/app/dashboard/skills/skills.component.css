@@ -1,0 +1,106 @@
+/* Container Styling */
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 150px;
+  background-color: #f5f7fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.dashboard-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+
+/* Skills Table */
+.skills-section {
+  overflow-x: auto; /* Make the table scrollable on smaller screens */
+  margin-bottom: 20px;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  text-align: left;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.styled-table th {
+  background-color: #007bff;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.styled-table tr {
+  transition: background-color 0.3s ease;
+}
+
+.styled-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Action Buttons */
+button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.styled-table td button {
+  background-color: #dc3545; /* Red button for delete */
+  color: #fff;
+}
+
+.styled-table td button:hover {
+  background-color: #c82333;
+}
+
+/* Add Skill Button */
+.skills-section button {
+  background-color: #28a745; /* Green button for add */
+  color: #fff;
+  margin-top: 10px;
+  float: right; /* Align to the right */
+}
+
+.skills-section button:hover {
+  background-color: #218838;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+  .styled-table {
+    font-size: 14px;
+  }
+
+  .dashboard-container {
+    padding: 10px;
+  }
+
+  .styled-table th,
+  .styled-table td {
+    padding: 10px;
+  }
+}

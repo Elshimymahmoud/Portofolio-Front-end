@@ -1,0 +1,54 @@
+<!-- home.component.html -->
+<div class="dashboard-container">
+  <h2>Dashboard</h2>
+
+  <!-- Services Section -->
+  <section class="dashboard-section">
+    <h3>Services</h3>
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Image</th>
+          <th>Description</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let service of services">
+          <td>{{ service.title }}</td>
+          <td><img [src]="service.image" alt="Service Image" class="table-img" /></td>
+          <td>{{ service.description }}</td>
+          <td>
+            <button class="edit-btn" (click)="editService(service)">Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="dashboard-section">
+    <h3>Projects</h3>
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Image</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let project of projects">
+          <td>{{ project.title }}</td>
+          <td><img [src]="project.image" alt="Project Image" class="table-img" /></td>
+          <td>
+            <button class="edit-btn" (click)="editProject(project)">Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+
+<!-- Services Edit Modal -->

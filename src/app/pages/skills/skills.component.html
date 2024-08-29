@@ -1,0 +1,58 @@
+<section id="skills" >
+  
+    <div class="container">
+        <div class="download_cv">
+            <a style="    width: 139px;
+            margin: auto;
+            display: flex;" href="https://yellow-marleah-58.tiiny.site/"target="_blank" class="btn btn-primary " tabindex="-1" role="button" aria-disabled="true">Download CV</a>
+    </div>
+        <h2><strong>{{title }}</strong></h2>
+        <span class="bar-title mb-5"></span>
+        <div class="row mt-2">
+            <div class="col-lg-4" data-aos="fade-up " data-aos-anchor-placement="center-bottom" data-aos-delay="300">
+                <h5 class="h5"><strong>{{'skills technologies' }}</strong></h5>
+                <div id="skillgraph">
+                    <div class='row skill-row' *ngFor="let technologie of technologiesSkills;">
+                        <div class="label d-flex flex-row">
+                            <span class="skillLabel">{{technologie.title}}</span>
+                            <span class="skill-percent">{{technologie.progress}}%</span>
+                        </div>
+                        <span class='skillData-Wrapper'>
+                            <span [style]="'width:' + technologie.progress + '%'" class='skillData bg-rust'></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-down" data-aos-anchor-placement="center-bottom" data-aos-delay="300">
+                <h5 class="h5"><strong>{{'skills tools'}}</strong></h5>
+                <div id="skillgraph" class="panel panel-default">
+                    <div class='row skill-row' *ngFor="let tool of toolsSkills;">
+                        <div class="label d-flex flex-row">
+                            <span class='skillLabel'>{{tool.title}}</span>
+                            <span class="skill-percent">{{tool.progress}}%</span>
+                        </div>
+                        <span class='skillData-Wrapper'>
+                            <span [style]="'width:' + tool.progress + '%'" class='skillData bg-rust'></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-delay="300">
+                <h5 class="h5"><strong>{{'skills methodologies'}}</strong></h5>
+                <div id="skillgraph" class="panel panel-default">
+                    <div class='row skill-row' *ngFor="let methodologie of methodologiesSkills;">
+                        <div class="label d-flex flex-row">
+                            <span class='skillLabel'>{{methodologie.title}}</span>
+                            <span class="skill-percent">{{methodologie.progress}}%</span>
+                        </div>
+                        <span class='skillData-Wrapper'>
+                            <span [style]="'width:' + methodologie.progress + '%'"  class='skillData bg-rust'></span>
+                        </span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

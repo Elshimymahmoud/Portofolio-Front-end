@@ -1,0 +1,41 @@
+<div class="dashboard-container">
+  <h2>Skills Dashboard</h2>
+
+  <!-- Skills Table -->
+  <section class="skills-section">
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Category</th>
+          <th>Progress</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let skill of skills">
+          <td>{{ skill.title }}</td>
+          <td>{{ skill.category }}</td>
+          <td>{{ skill.progress }}%</td>
+          <td>
+            <button (click)="openDeleteSkillModal(skill)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button (click)="openAddSkillModal()">Add Skill</button>
+  </section>
+
+  <!-- Add Skill Modal -->
+  <app-add-skills
+    [isOpen]="isAddSkillModalOpen"
+    (close)="closeAddSkillModal()"
+  ></app-add-skills>
+
+  <!-- Delete Skill Modal -->
+  <app-delete-skills
+    [isOpen]="isDeleteSkillModalOpen"
+    [skillToDelete]="selectedSkill"
+    (close)="closeDeleteSkillModal()"
+  ></app-delete-skills>
+</div>
